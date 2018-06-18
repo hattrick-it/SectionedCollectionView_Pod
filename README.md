@@ -22,7 +22,7 @@ pod 'SectionedCollectionView'
 
 ## Author
 
-estebanarrua, estarr22@hotmail.com
+estebanarrua, esteban.arrua@hattrick-it.com
 
 ## License
 
