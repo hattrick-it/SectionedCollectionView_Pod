@@ -1,0 +1,6 @@
+framework module Pods_SectionedCollectionView_Example {
+  umbrella header "Pods-SectionedCollectionView_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

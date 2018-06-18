@@ -1,0 +1,6 @@
+framework module SectionedCollectionView {
+  umbrella header "SectionedCollectionView-umbrella.h"
+
+  export *
+  module * { export * }
+}

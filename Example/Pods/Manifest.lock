@@ -1,0 +1,16 @@
+PODS:
+  - SectionedCollectionView (0.1.0)
+
+DEPENDENCIES:
+  - SectionedCollectionView (from `../`)
+
+EXTERNAL SOURCES:
+  SectionedCollectionView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SectionedCollectionView: e2fb86e8bd630984712df15817106b1809eab2e9
+
+PODFILE CHECKSUM: 3716a10da3cfe0a241b05e43580ac29e4cac9913
+
+COCOAPODS: 1.5.0
