@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19626D9C5811E35928AF46FB57B50172 /* SectionedCollectionView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7106BF8857BD44C9D438BCB4CDA7A896 /* SectionedCollectionView-dummy.m */; };
+		189D19713E3743E6CB5CD92912CE6666 /* SectionOfCustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D1B5984AA97CECFD7367484BE1FFD4 /* SectionOfCustomData.swift */; };
 		4F198E858080C8329FF03B235719A361 /* Pods-SectionedCollectionView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABCE7CF1F90BCE6B60EF253CA614962 /* Pods-SectionedCollectionView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55B77B973C79459737EC3E8FB7A9C07F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		7C3CFA1D18CA41050D63ED18FFD55DE2 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F1BE7D87E44E695DF3CC9488820F8B /* ItemCollectionViewCell.swift */; };
 		A93A1660EF31824D6A42A98B8F9C6816 /* Pods-SectionedCollectionView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A7033924AB74D582F8E9DE4768C874 /* Pods-SectionedCollectionView_Example-dummy.m */; };
-		AD8A4E9E61901ED48DB9CEC86B3A6AE5 /* SectionedCollectionView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47B25FF5428D54EEF7AFB0F5E5AE063C /* SectionedCollectionView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD8A4E9E61901ED48DB9CEC86B3A6AE5 /* SectionedCollectionView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A0AE9240A04423FFB8A79256CC192FE9 /* SectionedCollectionView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8CDE9E5E6CDC6FA96241190BD9FB3A4 /* Pods-SectionedCollectionView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E38D5E8BC0F59951B90D5BC03D4BBBC /* Pods-SectionedCollectionView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ED8E405CEDFAE5BC5E1DE3D7197B0B65 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761CB24A3F42F9262E1D03813053E8BB /* ReplaceMe.swift */; };
+		E323A0D81EDF30B15A976BB7AA17B045 /* SectionedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA16F1CFC0400D3221636EFA510BE3 /* SectionedCollectionView.swift */; };
 		F01E144DD5B848244F1112A769C1B1B9 /* Pods-SectionedCollectionView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 453C9CA644CF9E0E691781DCB724E662 /* Pods-SectionedCollectionView_Tests-dummy.m */; };
+		F2EF770A24B76B5D077F1A42C32A50A5 /* CustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D209A603D95BB68FF2F4F93F2BEB1F /* CustomData.swift */; };
 		F9B196D610C00CB372C08BEC8ACD9F25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		FA6A12ADF807D7A55B2FEE33E9E134B6 /* SectionedCollectionView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBEFB3D0DB8D8B9BFC8265F41D24721 /* SectionedCollectionView-dummy.m */; };
 		FC761CB2E56B23EDEA5FD1F35B6EB8E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,40 +40,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		087AC1A4B49B1AA61F3B19CF99845D3A /* SectionedCollectionView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SectionedCollectionView.modulemap; sourceTree = "<group>"; };
-		0DB0E829E96F1AB5E5B54692155B03D4 /* SectionedCollectionView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SectionedCollectionView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0955C5B29366BBCB1A79A487B889959B /* SectionedCollectionView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SectionedCollectionView.modulemap; sourceTree = "<group>"; };
+		0DDBF338034D8644AEA17FF36CBC7B11 /* SectionedCollectionView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SectionedCollectionView.xcconfig; sourceTree = "<group>"; };
 		0E906A511CD2BB62B72A7D1EAACA7E05 /* Pods-SectionedCollectionView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SectionedCollectionView_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		13F1BE7D87E44E695DF3CC9488820F8B /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ItemCollectionViewCell.swift; path = SectionedCollectionView/Classes/ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		14A7033924AB74D582F8E9DE4768C874 /* Pods-SectionedCollectionView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SectionedCollectionView_Example-dummy.m"; sourceTree = "<group>"; };
 		2A8F6E82FED40A34FF26591FBABF0258 /* Pods-SectionedCollectionView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SectionedCollectionView_Tests.modulemap"; sourceTree = "<group>"; };
 		2ABCE7CF1F90BCE6B60EF253CA614962 /* Pods-SectionedCollectionView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SectionedCollectionView_Example-umbrella.h"; sourceTree = "<group>"; };
 		32DA4BC08BBB304AE2F4C16B0C1053FD /* Pods-SectionedCollectionView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SectionedCollectionView_Example-frameworks.sh"; sourceTree = "<group>"; };
 		38E3BC73D1FB74E764669538EFAEC8CE /* Pods-SectionedCollectionView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SectionedCollectionView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		3A9B5F6C957EE47496C6BD189D8B8D2E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		3E38D5E8BC0F59951B90D5BC03D4BBBC /* Pods-SectionedCollectionView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SectionedCollectionView_Tests-umbrella.h"; sourceTree = "<group>"; };
 		453C9CA644CF9E0E691781DCB724E662 /* Pods-SectionedCollectionView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SectionedCollectionView_Tests-dummy.m"; sourceTree = "<group>"; };
 		45D17E6034DE9044AF2ACC60E021E913 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		47B25FF5428D54EEF7AFB0F5E5AE063C /* SectionedCollectionView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SectionedCollectionView-umbrella.h"; sourceTree = "<group>"; };
 		4D8FE7E2A87FD4767DA39D0BA39F101E /* Pods-SectionedCollectionView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SectionedCollectionView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5941BF4257175BCEA080D287681E9AA2 /* SectionedCollectionView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SectionedCollectionView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5FCA4339E4580DF61D6428C40733505B /* Pods-SectionedCollectionView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SectionedCollectionView_Tests-resources.sh"; sourceTree = "<group>"; };
 		6188231B818C03A93E4A6F81054BD433 /* Pods-SectionedCollectionView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SectionedCollectionView_Example.modulemap"; sourceTree = "<group>"; };
+		63CA16F1CFC0400D3221636EFA510BE3 /* SectionedCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SectionedCollectionView.swift; path = SectionedCollectionView/Classes/SectionedCollectionView.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		69B8153B6F7EAD01869CAE273B4B56F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B77AAA6582F2815E01E32453AC6BED9 /* Pods_SectionedCollectionView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SectionedCollectionView_Example.framework; path = "Pods-SectionedCollectionView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7106BF8857BD44C9D438BCB4CDA7A896 /* SectionedCollectionView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SectionedCollectionView-dummy.m"; sourceTree = "<group>"; };
+		6FFCC05D3867050EA243D6B2490D86AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		716F5291B125FE0353DDAEFE41E4B041 /* Pods-SectionedCollectionView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SectionedCollectionView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		761CB24A3F42F9262E1D03813053E8BB /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = SectionedCollectionView/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
-		8C4B5A2975A9175A5A5942D73B81E4A2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		72D209A603D95BB68FF2F4F93F2BEB1F /* CustomData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomData.swift; path = SectionedCollectionView/Classes/CustomData.swift; sourceTree = "<group>"; };
+		8DBEFB3D0DB8D8B9BFC8265F41D24721 /* SectionedCollectionView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SectionedCollectionView-dummy.m"; sourceTree = "<group>"; };
 		93615ADC05EC792072241771F7973452 /* Pods-SectionedCollectionView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SectionedCollectionView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9A0332364023438AAE34A9F99352CFD7 /* SectionedCollectionView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SectionedCollectionView-prefix.pch"; sourceTree = "<group>"; };
+		95C4EBECB490D78DE2C33AB14468DD85 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		9CEC483B0B23C06A16B020160C3D0DB0 /* Pods-SectionedCollectionView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SectionedCollectionView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A0AE9240A04423FFB8A79256CC192FE9 /* SectionedCollectionView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SectionedCollectionView-umbrella.h"; sourceTree = "<group>"; };
 		A66905D3F9C4636648C3E426C4E40742 /* Pods_SectionedCollectionView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SectionedCollectionView_Tests.framework; path = "Pods-SectionedCollectionView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6480292886D54F3A2A1653F217B84D9 /* SectionedCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SectionedCollectionView.framework; path = SectionedCollectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C81D1F8FEFDD265823EE213AE249704C /* Pods-SectionedCollectionView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SectionedCollectionView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C8DE201BAF5FFA4BF2796436DE6C2054 /* Pods-SectionedCollectionView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SectionedCollectionView_Example-resources.sh"; sourceTree = "<group>"; };
+		C973D6E95E8EB540F35B1BDB1560B0CD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		CDA511E0D612694D108DDE804F478D1A /* Pods-SectionedCollectionView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SectionedCollectionView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		D9B2ADF488DDDB47CD5BEEEA6E586647 /* SectionedCollectionView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SectionedCollectionView.xcconfig; sourceTree = "<group>"; };
 		DEC843FA367B3E00CF437D75A481968D /* Pods-SectionedCollectionView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SectionedCollectionView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E4D1B5984AA97CECFD7367484BE1FFD4 /* SectionOfCustomData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SectionOfCustomData.swift; path = SectionedCollectionView/Classes/SectionOfCustomData.swift; sourceTree = "<group>"; };
+		EF62F9569F6B78A98F45DB4FE9511130 /* SectionedCollectionView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SectionedCollectionView-prefix.pch"; sourceTree = "<group>"; };
 		F7509ADFFFAE2FA859DCE02F7D68B14E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +108,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B405311EC7BE9DC12F03F7603398A6D /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				C973D6E95E8EB540F35B1BDB1560B0CD /* LICENSE */,
+				95C4EBECB490D78DE2C33AB14468DD85 /* README.md */,
+				5941BF4257175BCEA080D287681E9AA2 /* SectionedCollectionView.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		59EC9553AB315FD898563E01FCB0F64F /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,29 +128,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		706E12B6837698C874942B068603B29C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6FFCC05D3867050EA243D6B2490D86AE /* Info.plist */,
+				0955C5B29366BBCB1A79A487B889959B /* SectionedCollectionView.modulemap */,
+				0DDBF338034D8644AEA17FF36CBC7B11 /* SectionedCollectionView.xcconfig */,
+				8DBEFB3D0DB8D8B9BFC8265F41D24721 /* SectionedCollectionView-dummy.m */,
+				EF62F9569F6B78A98F45DB4FE9511130 /* SectionedCollectionView-prefix.pch */,
+				A0AE9240A04423FFB8A79256CC192FE9 /* SectionedCollectionView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SectionedCollectionView";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				A8BB7AAF8C894CF242C0E71D4B92A589 /* Development Pods */,
+				AFBD4D8A26B81187C418DAC32AE18AA9 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				59EC9553AB315FD898563E01FCB0F64F /* Products */,
 				F1E8B3593C94AD1F1A09428836CB137C /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		8EC542DEF0B6BD5F7D49AFD08E2BF3B6 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				69B8153B6F7EAD01869CAE273B4B56F4 /* Info.plist */,
-				087AC1A4B49B1AA61F3B19CF99845D3A /* SectionedCollectionView.modulemap */,
-				D9B2ADF488DDDB47CD5BEEEA6E586647 /* SectionedCollectionView.xcconfig */,
-				7106BF8857BD44C9D438BCB4CDA7A896 /* SectionedCollectionView-dummy.m */,
-				9A0332364023438AAE34A9F99352CFD7 /* SectionedCollectionView-prefix.pch */,
-				47B25FF5428D54EEF7AFB0F5E5AE063C /* SectionedCollectionView-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SectionedCollectionView";
 			sourceTree = "<group>";
 		};
 		94E80F0C38BB9804DA39CD522AF4F2CB /* Pods-SectionedCollectionView_Tests */ = {
@@ -155,21 +171,10 @@
 			path = "Target Support Files/Pods-SectionedCollectionView_Tests";
 			sourceTree = "<group>";
 		};
-		A66B9FC4F67038AAE5041BB1F0E2BAEC /* SectionedCollectionView */ = {
+		AFBD4D8A26B81187C418DAC32AE18AA9 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				761CB24A3F42F9262E1D03813053E8BB /* ReplaceMe.swift */,
-				E925EF9619BB5106246F3EBF3A475D3F /* Pod */,
-				8EC542DEF0B6BD5F7D49AFD08E2BF3B6 /* Support Files */,
-			);
-			name = SectionedCollectionView;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		A8BB7AAF8C894CF242C0E71D4B92A589 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A66B9FC4F67038AAE5041BB1F0E2BAEC /* SectionedCollectionView */,
+				F650C314EBA58AD83672E6BE77A69A75 /* SectionedCollectionView */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -188,16 +193,6 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		E925EF9619BB5106246F3EBF3A475D3F /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				8C4B5A2975A9175A5A5942D73B81E4A2 /* LICENSE */,
-				3A9B5F6C957EE47496C6BD189D8B8D2E /* README.md */,
-				0DB0E829E96F1AB5E5B54692155B03D4 /* SectionedCollectionView.podspec */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		EB172AD0FD0956BC63289ADBCD9EB093 /* Pods-SectionedCollectionView_Example */ = {
@@ -225,6 +220,20 @@
 				94E80F0C38BB9804DA39CD522AF4F2CB /* Pods-SectionedCollectionView_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F650C314EBA58AD83672E6BE77A69A75 /* SectionedCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				72D209A603D95BB68FF2F4F93F2BEB1F /* CustomData.swift */,
+				13F1BE7D87E44E695DF3CC9488820F8B /* ItemCollectionViewCell.swift */,
+				63CA16F1CFC0400D3221636EFA510BE3 /* SectionedCollectionView.swift */,
+				E4D1B5984AA97CECFD7367484BE1FFD4 /* SectionOfCustomData.swift */,
+				3B405311EC7BE9DC12F03F7603398A6D /* Pod */,
+				706E12B6837698C874942B068603B29C /* Support Files */,
+			);
+			name = SectionedCollectionView;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +288,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F9C3F69A45B3483379A6CA32F7A9DD8 /* Build configuration list for PBXNativeTarget "SectionedCollectionView" */;
 			buildPhases = (
-				152BAC4DDD027706619DA4C738BC4167 /* Sources */,
+				BA7981428F7BE3797331DE68B2487489 /* Sources */,
 				EF3285E8D39D34A9C3FE7C3BF1BD57A3 /* Frameworks */,
 				1CD0D066EF007321099FD142343A016E /* Headers */,
 			);
@@ -339,15 +348,6 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		152BAC4DDD027706619DA4C738BC4167 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED8E405CEDFAE5BC5E1DE3D7197B0B65 /* ReplaceMe.swift in Sources */,
-				19626D9C5811E35928AF46FB57B50172 /* SectionedCollectionView-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		41D5A30F47A91C0039CA8B2016CC2A2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -361,6 +361,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A93A1660EF31824D6A42A98B8F9C6816 /* Pods-SectionedCollectionView_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA7981428F7BE3797331DE68B2487489 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2EF770A24B76B5D077F1A42C32A50A5 /* CustomData.swift in Sources */,
+				7C3CFA1D18CA41050D63ED18FFD55DE2 /* ItemCollectionViewCell.swift in Sources */,
+				FA6A12ADF807D7A55B2FEE33E9E134B6 /* SectionedCollectionView-dummy.m in Sources */,
+				E323A0D81EDF30B15A976BB7AA17B045 /* SectionedCollectionView.swift in Sources */,
+				189D19713E3743E6CB5CD92912CE6666 /* SectionOfCustomData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,41 +394,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		30B086888CE3960D7E502BCE342357ED /* Debug */ = {
+		30B0010386391337DC92DD7487DDFC09 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9B2ADF488DDDB47CD5BEEEA6E586647 /* SectionedCollectionView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SectionedCollectionView/SectionedCollectionView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SectionedCollectionView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SectionedCollectionView/SectionedCollectionView.modulemap";
-				PRODUCT_MODULE_NAME = SectionedCollectionView;
-				PRODUCT_NAME = SectionedCollectionView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		54059A04CD036B779777E78D4468F927 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9B2ADF488DDDB47CD5BEEEA6E586647 /* SectionedCollectionView.xcconfig */;
+			baseConfigurationReference = 0DDBF338034D8644AEA17FF36CBC7B11 /* SectionedCollectionView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -439,7 +419,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -601,6 +581,38 @@
 			};
 			name = Release;
 		};
+		C332A772517850A948811CACEF9CB447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DDBF338034D8644AEA17FF36CBC7B11 /* SectionedCollectionView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SectionedCollectionView/SectionedCollectionView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SectionedCollectionView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SectionedCollectionView/SectionedCollectionView.modulemap";
+				PRODUCT_MODULE_NAME = SectionedCollectionView;
+				PRODUCT_NAME = SectionedCollectionView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		C3857DD917AE914543A7773F5D4E6532 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93615ADC05EC792072241771F7973452 /* Pods-SectionedCollectionView_Example.release.xcconfig */;
@@ -729,8 +741,8 @@
 		8F9C3F69A45B3483379A6CA32F7A9DD8 /* Build configuration list for PBXNativeTarget "SectionedCollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				30B086888CE3960D7E502BCE342357ED /* Debug */,
-				54059A04CD036B779777E78D4468F927 /* Release */,
+				C332A772517850A948811CACEF9CB447 /* Debug */,
+				30B0010386391337DC92DD7487DDFC09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SectionedCollectionView: e2fb86e8bd630984712df15817106b1809eab2e9
+  SectionedCollectionView: 9863d07c05211f1fb0f9639533be96ca9a57d53b
 
 PODFILE CHECKSUM: 3716a10da3cfe0a241b05e43580ac29e4cac9913
 

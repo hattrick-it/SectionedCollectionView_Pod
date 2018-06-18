@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		070562EFA0D34EF640515784 /* Pods_SectionedCollectionView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD340868BBD9FC920AC207EF /* Pods_SectionedCollectionView_Example.framework */; };
+		383D877420D7F52F005211C3 /* CustomItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383D876E20D7F52F005211C3 /* CustomItemCollectionViewCell.xib */; };
+		383D877520D7F52F005211C3 /* HeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383D876F20D7F52F005211C3 /* HeaderViewCell.swift */; };
+		383D877620D7F52F005211C3 /* CustomItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383D877020D7F52F005211C3 /* CustomItemCollectionViewCell.swift */; };
+		383D877720D7F52F005211C3 /* FooterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383D877120D7F52F005211C3 /* FooterViewCell.xib */; };
+		383D877820D7F52F005211C3 /* HeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383D877220D7F52F005211C3 /* HeaderViewCell.xib */; };
+		383D877920D7F52F005211C3 /* FooterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383D877320D7F52F005211C3 /* FooterViewCell.swift */; };
+		383D877D20D7F567005211C3 /* SectionedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383D877B20D7F567005211C3 /* SectionedCollectionViewController.swift */; };
+		383D877E20D7F567005211C3 /* SectionedCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383D877C20D7F567005211C3 /* SectionedCollectionViewController.xib */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
@@ -28,6 +35,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		383D876E20D7F52F005211C3 /* CustomItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomItemCollectionViewCell.xib; path = Views/CustomItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		383D876F20D7F52F005211C3 /* HeaderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderViewCell.swift; path = Views/HeaderViewCell.swift; sourceTree = "<group>"; };
+		383D877020D7F52F005211C3 /* CustomItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomItemCollectionViewCell.swift; path = Views/CustomItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		383D877120D7F52F005211C3 /* FooterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FooterViewCell.xib; path = Views/FooterViewCell.xib; sourceTree = "<group>"; };
+		383D877220D7F52F005211C3 /* HeaderViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeaderViewCell.xib; path = Views/HeaderViewCell.xib; sourceTree = "<group>"; };
+		383D877320D7F52F005211C3 /* FooterViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FooterViewCell.swift; path = Views/FooterViewCell.swift; sourceTree = "<group>"; };
+		383D877B20D7F567005211C3 /* SectionedCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectionedCollectionViewController.swift; path = ViewControllers/SectionedCollectionViewController.swift; sourceTree = "<group>"; };
+		383D877C20D7F567005211C3 /* SectionedCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SectionedCollectionViewController.xib; path = ViewControllers/SectionedCollectionViewController.xib; sourceTree = "<group>"; };
 		403102228EAF6B777E61D3D7 /* Pods-SectionedCollectionView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SectionedCollectionView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SectionedCollectionView_Example/Pods-SectionedCollectionView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5785AD5B938C74A0A4C72FB0 /* SectionedCollectionView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SectionedCollectionView.podspec; path = ../SectionedCollectionView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5A2F0F910B7D32F339BF6C86 /* Pods-SectionedCollectionView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SectionedCollectionView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SectionedCollectionView_Tests/Pods-SectionedCollectionView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -35,7 +50,6 @@
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* SectionedCollectionView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SectionedCollectionView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +83,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		383D876D20D7F4F3005211C3 /*  Views */ = {
+			isa = PBXGroup;
+			children = (
+				383D877020D7F52F005211C3 /* CustomItemCollectionViewCell.swift */,
+				383D876E20D7F52F005211C3 /* CustomItemCollectionViewCell.xib */,
+				383D877320D7F52F005211C3 /* FooterViewCell.swift */,
+				383D877120D7F52F005211C3 /* FooterViewCell.xib */,
+				383D876F20D7F52F005211C3 /* HeaderViewCell.swift */,
+				383D877220D7F52F005211C3 /* HeaderViewCell.xib */,
+			);
+			name = " Views";
+			sourceTree = "<group>";
+		};
+		383D877A20D7F53A005211C3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				383D877B20D7F567005211C3 /* SectionedCollectionViewController.swift */,
+				383D877C20D7F567005211C3 /* SectionedCollectionViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -93,9 +129,10 @@
 		607FACD21AFB9204008FA782 /* Example for SectionedCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				383D877A20D7F53A005211C3 /* ViewControllers */,
+				383D876D20D7F4F3005211C3 /*  Views */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -212,6 +249,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = S84RM8A475;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -245,7 +283,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				383D877420D7F52F005211C3 /* CustomItemCollectionViewCell.xib in Resources */,
+				383D877720D7F52F005211C3 /* FooterViewCell.xib in Resources */,
+				383D877820D7F52F005211C3 /* HeaderViewCell.xib in Resources */,
+				383D877E20D7F567005211C3 /* SectionedCollectionViewController.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -322,7 +363,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383D877520D7F52F005211C3 /* HeaderViewCell.swift in Sources */,
+				383D877920D7F52F005211C3 /* FooterViewCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				383D877D20D7F567005211C3 /* SectionedCollectionViewController.swift in Sources */,
+				383D877620D7F52F005211C3 /* CustomItemCollectionViewCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,14 +391,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -469,6 +506,7 @@
 			baseConfigurationReference = 8B57F505CB25639965EBF6DA /* Pods-SectionedCollectionView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S84RM8A475;
 				INFOPLIST_FILE = SectionedCollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -484,6 +522,7 @@
 			baseConfigurationReference = 403102228EAF6B777E61D3D7 /* Pods-SectionedCollectionView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S84RM8A475;
 				INFOPLIST_FILE = SectionedCollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;

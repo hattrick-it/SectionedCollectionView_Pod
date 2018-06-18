@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SectionedCollectionView'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of SectionedCollectionView.'
+  s.version          = '1.0.0'
+  s.summary          = 'A component to select items in a sectioned Collection View.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,17 +18,18 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+A component to select items in a sectioned Collection View. This component help you to get the selected items only with a delegate.
                        DESC
 
-  s.homepage         = 'https://github.com/estebanarrua/SectionedCollectionView'
+  s.homepage         = 'https://github.com/hattrick-it/SectionedCollectionView_Pod'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'estebanarrua' => 'estarr22@hotmail.com' }
-  s.source           = { :git => 'https://github.com/estebanarrua/SectionedCollectionView.git', :tag => s.version.to_s }
+  s.author           = { 'estebanarrua' => 'estebanarrua@hattrick.com' }
+  s.source           = { :git => 'https://github.com/hattrick-it/SectionedCollectionView_Pod.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
+  s.swift_version = '3.0'
 
   s.source_files = 'SectionedCollectionView/Classes/**/*'
   
