@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		070562EFA0D34EF640515784 /* Pods_SectionedCollectionView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD340868BBD9FC920AC207EF /* Pods_SectionedCollectionView_Example.framework */; };
+		38297D6920D9730A00C9DB5A /* MyCustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38297D6820D9730A00C9DB5A /* MyCustomData.swift */; };
+		38297D6B20D9812500C9DB5A /* MySectionOfCustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38297D6A20D9812500C9DB5A /* MySectionOfCustomData.swift */; };
 		383D877420D7F52F005211C3 /* CustomItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383D876E20D7F52F005211C3 /* CustomItemCollectionViewCell.xib */; };
 		383D877520D7F52F005211C3 /* HeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383D876F20D7F52F005211C3 /* HeaderViewCell.swift */; };
 		383D877620D7F52F005211C3 /* CustomItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383D877020D7F52F005211C3 /* CustomItemCollectionViewCell.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38297D6820D9730A00C9DB5A /* MyCustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomData.swift; sourceTree = "<group>"; };
+		38297D6A20D9812500C9DB5A /* MySectionOfCustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySectionOfCustomData.swift; sourceTree = "<group>"; };
 		383D876E20D7F52F005211C3 /* CustomItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomItemCollectionViewCell.xib; path = Views/CustomItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		383D876F20D7F52F005211C3 /* HeaderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderViewCell.swift; path = Views/HeaderViewCell.swift; sourceTree = "<group>"; };
 		383D877020D7F52F005211C3 /* CustomItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomItemCollectionViewCell.swift; path = Views/CustomItemCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -83,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38297D6720D972E000C9DB5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38297D6820D9730A00C9DB5A /* MyCustomData.swift */,
+				38297D6A20D9812500C9DB5A /* MySectionOfCustomData.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		383D876D20D7F4F3005211C3 /*  Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +142,7 @@
 		607FACD21AFB9204008FA782 /* Example for SectionedCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				38297D6720D972E000C9DB5A /* Model */,
 				383D877A20D7F53A005211C3 /* ViewControllers */,
 				383D876D20D7F4F3005211C3 /*  Views */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
@@ -365,6 +379,8 @@
 			files = (
 				383D877520D7F52F005211C3 /* HeaderViewCell.swift in Sources */,
 				383D877920D7F52F005211C3 /* FooterViewCell.swift in Sources */,
+				38297D6920D9730A00C9DB5A /* MyCustomData.swift in Sources */,
+				38297D6B20D9812500C9DB5A /* MySectionOfCustomData.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				383D877D20D7F567005211C3 /* SectionedCollectionViewController.swift in Sources */,
 				383D877620D7F52F005211C3 /* CustomItemCollectionViewCell.swift in Sources */,

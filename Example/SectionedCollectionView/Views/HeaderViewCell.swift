@@ -29,9 +29,9 @@ class HeaderViewCell: ItemCollectionViewCell {
         setupStyle()
     }
     
-    override func configure(withValue value: Any) {
-        if let section = value as? SectionOfCustomData {
-            nameLabel.text = section.header
+    override func configure(withValue value: Any?) {
+        if let header = value as? String {
+            nameLabel.text = header
         }
     }
     
