@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-public protocol SectionedCollectionViewDelegate {
-    func selectedItems(selected: [CustomData])
-    func limitReached()
+@objc public protocol SectionedCollectionViewDelegate {
+    @objc optional func selectedItems(selected: [Selectable])
+    @objc optional func limitReached()
 }
 
 public struct SectionedCollectionViewSettings {
@@ -58,7 +58,7 @@ public struct SectionedCollectionViewSettings {
     
 }
 
-public class SectionedCollectionView: UIView {
+public class SectionedCollectionView: UIView{
  
     public var settings = SectionedCollectionViewSettings()
     
@@ -158,51 +158,51 @@ public class SectionedCollectionView: UIView {
 }
 
 extension SectionedCollectionView: UICollectionViewDelegate {
-    
+
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedItemsCount = self.sections.compactMap({ sections -> [CustomData] in
-            return sections.selectedItems().items
+        let selectedItemsCount = self.sections.compactMap({ sections -> [Selectable] in
+            return sections.selectedItems()
         }).flatMap({ $0 }).count
-        
+
         if (self.sections[indexPath.section].items[indexPath.row].selected || self.settings.data.selectedLimit == nil || selectedItemsCount < self.settings.data.selectedLimit!) {
             self.sections[indexPath.section].items[indexPath.row].selected = !self.sections[indexPath.section].items[indexPath.row].selected
-            self.delegate?.selectedItems(selected: self.sections.map({ section -> [CustomData] in
-                return section.selectedItems().items
+            self.delegate?.selectedItems?(selected: self.sections.map({ section -> [Selectable] in
+                return section.selectedItems()
             }).flatMap({ $0 }))
             collectionView.reloadItems(at: [indexPath])
         } else {
-            self.delegate?.limitReached()
+            self.delegate?.limitReached?()
         }
     }
-    
+
 }
 
 extension SectionedCollectionView: UICollectionViewDataSource {
-    
+
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.sections[section].items.count
     }
-    
+
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
         return self.sections.count
     }
-    
+
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.settings.viewCells.itemCollectionViewCellReuseIdentifier, for: indexPath) as! ItemCollectionViewCell
         cell.configure(withValue: self.sections[indexPath.section].items[indexPath.row])
         return cell
     }
-    
+
     public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if (kind == UICollectionElementKindSectionHeader) {
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: self.settings.viewCells.headerViewCellReuseIdentifier, for: indexPath) as! ItemCollectionViewCell
-            header.configure(withValue: self.sections[indexPath.section])
+            header.configure(withValue: self.sections[indexPath.section].header)
             return header
         } else {
             let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: self.settings.viewCells.footerViewCellReuseIdentifier, for: indexPath) as! ItemCollectionViewCell
-            footer.configure(withValue: self.sections[indexPath.section])
+            footer.configure(withValue: self.sections[indexPath.section].footer)
             return footer
         }
     }
-    
+
 }

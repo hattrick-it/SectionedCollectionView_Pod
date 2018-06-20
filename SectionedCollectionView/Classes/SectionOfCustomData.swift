@@ -8,23 +8,28 @@
 
 import Foundation
 
-public struct SectionOfCustomData {
+open class Selectable: NSObject {
+    public var selected: Bool = false
+}
+
+open class SectionOfCustomData {
+    public typealias Item = Selectable
+    public typealias Header = Any
+    public typealias Footer = Any
     
-    public init(header: String, items: [Item]){
-        self.header = header
+    var items: [Item]
+    var header: Header?
+    var footer: Footer?
+    
+    public init(header: Header? = nil, items: [Item], footer: Footer? = nil) {
         self.items = items
+        self.header = header
+        self.footer = footer
     }
-    
-    public var header: String
-    public var items: [Item]
 }
 
 extension SectionOfCustomData {
-    public typealias Item = CustomData
-    
-    public func selectedItems() -> SectionOfCustomData {
-        return SectionOfCustomData(header: self.header, items: self.items.filter({ item -> Bool in
-            item.selected
-        }))
+    public func selectedItems() -> [Item] {
+        return self.items.filter{ $0.selected }
     }
 }
