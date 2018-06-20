@@ -16,7 +16,6 @@
 		C8CDE9E5E6CDC6FA96241190BD9FB3A4 /* Pods-SectionedCollectionView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E38D5E8BC0F59951B90D5BC03D4BBBC /* Pods-SectionedCollectionView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E323A0D81EDF30B15A976BB7AA17B045 /* SectionedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA16F1CFC0400D3221636EFA510BE3 /* SectionedCollectionView.swift */; };
 		F01E144DD5B848244F1112A769C1B1B9 /* Pods-SectionedCollectionView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 453C9CA644CF9E0E691781DCB724E662 /* Pods-SectionedCollectionView_Tests-dummy.m */; };
-		F2EF770A24B76B5D077F1A42C32A50A5 /* CustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D209A603D95BB68FF2F4F93F2BEB1F /* CustomData.swift */; };
 		F9B196D610C00CB372C08BEC8ACD9F25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		FA6A12ADF807D7A55B2FEE33E9E134B6 /* SectionedCollectionView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBEFB3D0DB8D8B9BFC8265F41D24721 /* SectionedCollectionView-dummy.m */; };
 		FC761CB2E56B23EDEA5FD1F35B6EB8E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -53,26 +52,25 @@
 		453C9CA644CF9E0E691781DCB724E662 /* Pods-SectionedCollectionView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SectionedCollectionView_Tests-dummy.m"; sourceTree = "<group>"; };
 		45D17E6034DE9044AF2ACC60E021E913 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D8FE7E2A87FD4767DA39D0BA39F101E /* Pods-SectionedCollectionView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SectionedCollectionView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5941BF4257175BCEA080D287681E9AA2 /* SectionedCollectionView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SectionedCollectionView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5941BF4257175BCEA080D287681E9AA2 /* SectionedCollectionView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = SectionedCollectionView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5FCA4339E4580DF61D6428C40733505B /* Pods-SectionedCollectionView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SectionedCollectionView_Tests-resources.sh"; sourceTree = "<group>"; };
 		6188231B818C03A93E4A6F81054BD433 /* Pods-SectionedCollectionView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SectionedCollectionView_Example.modulemap"; sourceTree = "<group>"; };
 		63CA16F1CFC0400D3221636EFA510BE3 /* SectionedCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SectionedCollectionView.swift; path = SectionedCollectionView/Classes/SectionedCollectionView.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6B77AAA6582F2815E01E32453AC6BED9 /* Pods_SectionedCollectionView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SectionedCollectionView_Example.framework; path = "Pods-SectionedCollectionView_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B77AAA6582F2815E01E32453AC6BED9 /* Pods_SectionedCollectionView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SectionedCollectionView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FFCC05D3867050EA243D6B2490D86AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		716F5291B125FE0353DDAEFE41E4B041 /* Pods-SectionedCollectionView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SectionedCollectionView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		72D209A603D95BB68FF2F4F93F2BEB1F /* CustomData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomData.swift; path = SectionedCollectionView/Classes/CustomData.swift; sourceTree = "<group>"; };
 		8DBEFB3D0DB8D8B9BFC8265F41D24721 /* SectionedCollectionView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SectionedCollectionView-dummy.m"; sourceTree = "<group>"; };
 		93615ADC05EC792072241771F7973452 /* Pods-SectionedCollectionView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SectionedCollectionView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		95C4EBECB490D78DE2C33AB14468DD85 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95C4EBECB490D78DE2C33AB14468DD85 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9CEC483B0B23C06A16B020160C3D0DB0 /* Pods-SectionedCollectionView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SectionedCollectionView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0AE9240A04423FFB8A79256CC192FE9 /* SectionedCollectionView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SectionedCollectionView-umbrella.h"; sourceTree = "<group>"; };
-		A66905D3F9C4636648C3E426C4E40742 /* Pods_SectionedCollectionView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SectionedCollectionView_Tests.framework; path = "Pods-SectionedCollectionView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6480292886D54F3A2A1653F217B84D9 /* SectionedCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SectionedCollectionView.framework; path = SectionedCollectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A66905D3F9C4636648C3E426C4E40742 /* Pods_SectionedCollectionView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SectionedCollectionView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6480292886D54F3A2A1653F217B84D9 /* SectionedCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SectionedCollectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C81D1F8FEFDD265823EE213AE249704C /* Pods-SectionedCollectionView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SectionedCollectionView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C8DE201BAF5FFA4BF2796436DE6C2054 /* Pods-SectionedCollectionView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SectionedCollectionView_Example-resources.sh"; sourceTree = "<group>"; };
-		C973D6E95E8EB540F35B1BDB1560B0CD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C973D6E95E8EB540F35B1BDB1560B0CD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CDA511E0D612694D108DDE804F478D1A /* Pods-SectionedCollectionView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SectionedCollectionView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		DEC843FA367B3E00CF437D75A481968D /* Pods-SectionedCollectionView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SectionedCollectionView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E4D1B5984AA97CECFD7367484BE1FFD4 /* SectionOfCustomData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SectionOfCustomData.swift; path = SectionedCollectionView/Classes/SectionOfCustomData.swift; sourceTree = "<group>"; };
@@ -225,7 +223,6 @@
 		F650C314EBA58AD83672E6BE77A69A75 /* SectionedCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				72D209A603D95BB68FF2F4F93F2BEB1F /* CustomData.swift */,
 				13F1BE7D87E44E695DF3CC9488820F8B /* ItemCollectionViewCell.swift */,
 				63CA16F1CFC0400D3221636EFA510BE3 /* SectionedCollectionView.swift */,
 				E4D1B5984AA97CECFD7367484BE1FFD4 /* SectionOfCustomData.swift */,
@@ -368,7 +365,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2EF770A24B76B5D077F1A42C32A50A5 /* CustomData.swift in Sources */,
 				7C3CFA1D18CA41050D63ED18FFD55DE2 /* ItemCollectionViewCell.swift in Sources */,
 				FA6A12ADF807D7A55B2FEE33E9E134B6 /* SectionedCollectionView-dummy.m in Sources */,
 				E323A0D81EDF30B15A976BB7AA17B045 /* SectionedCollectionView.swift in Sources */,

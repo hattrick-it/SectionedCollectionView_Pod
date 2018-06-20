@@ -37,21 +37,21 @@ class SectionedCollectionViewController: UIViewController {
         sectionedCollectionView.setupView()
         
         let sections = [
-            SectionOfCustomData(header: "Management", items: [CustomData(name: "FOH management", selected: false), CustomData(name: "Bar management", selected: false), CustomData(name: "Kitchen management", selected: false), CustomData(name: "Baking management", selected: false) ]),
-            SectionOfCustomData(header: "Front of house", items: [CustomData(name: "Bartending", selected: false), CustomData(name: "Barista", selected: false), CustomData(name: "Serving", selected: false), CustomData(name: "Host/Hostess", selected: false), CustomData(name: "Sommelier", selected: false), CustomData(name: "Cashier", selected: false), CustomData(name: "Bar backing", selected: false), CustomData(name: "Bussing", selected: false), CustomData(name: "Bouncer or security", selected: false), CustomData(name: "Coat check", selected: false), CustomData(name: "Expo / Food runner", selected: false), CustomData(name: "Garde manger / salad", selected: false)]),
-            SectionOfCustomData(header: "Back of house", items: [CustomData(name: "Prepping", selected: false), CustomData(name: "Hot line cook", selected: false), CustomData(name: "Pastry", selected: false), CustomData(name: "Baking", selected: false), CustomData(name: "Sushi", selected: false), CustomData(name: "Dishwashing", selected: false)])
+            MySectionOfCustomData(header: "Management", items: [MyCustomData(name: "FOH management", selected: false), MyCustomData(name: "Bar management", selected: false), MyCustomData(name: "Kitchen management", selected: false), MyCustomData(name: "Baking management", selected: false) ]),
+            MySectionOfCustomData(header: "Front of house", items: [MyCustomData(name: "Bartending", selected: false), MyCustomData(name: "Barista", selected: false), MyCustomData(name: "Serving", selected: false), MyCustomData(name: "Host/Hostess", selected: false), MyCustomData(name: "Sommelier", selected: false), MyCustomData(name: "Cashier", selected: false), MyCustomData(name: "Bar backing", selected: false), MyCustomData(name: "Bussing", selected: false), MyCustomData(name: "Bouncer or security", selected: false), MyCustomData(name: "Coat check", selected: false), MyCustomData(name: "Expo / Food runner", selected: false), MyCustomData(name: "Garde manger / salad", selected: false)]),
+            MySectionOfCustomData(header: "Back of house", items: [MyCustomData(name: "Prepping", selected: false), MyCustomData(name: "Hot line cook", selected: false), MyCustomData(name: "Pastry", selected: false), MyCustomData(name: "Baking", selected: false), MyCustomData(name: "Sushi", selected: false), MyCustomData(name: "Dishwashing", selected: false)])
         ]
         
         sectionedCollectionView.setDataSource(sections: sections)
         sectionedCollectionView.delegate = self
-        
     }
     
 }
 
 extension SectionedCollectionViewController: SectionedCollectionViewDelegate {
     
-    func selectedItems(selected: [CustomData]) {
+    func selectedItems(selected: [Selectable]) {
+        let selected = selected as? [MyCustomData]
         print(selected)
     }
     
