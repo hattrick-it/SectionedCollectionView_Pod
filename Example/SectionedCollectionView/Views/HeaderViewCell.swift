@@ -30,9 +30,8 @@ class HeaderViewCell: ItemCollectionViewCell {
     }
     
     override func configure(withValue value: Any?) {
-        if let header = value as? String {
-            nameLabel.text = header
-        }
+        guard let header = value as? String else { return }
+        nameLabel.text = header
     }
     
     private func setupStyle() {

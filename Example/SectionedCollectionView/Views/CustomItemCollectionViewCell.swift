@@ -32,11 +32,10 @@ class CustomItemCollectionViewCell: ItemCollectionViewCell {
     }
 
     override func configure(withValue value: Any?) {
-        if let data = value as? MyCustomData {
-            nameLabel.text = data.name
-            nameLabel.textColor = data.selected ? .white : .black
-            activeGradientBackground(selected: data.selected)
-        }
+        guard let data = value as? MyCustomData else { return }
+        nameLabel.text = data.name
+        nameLabel.textColor = data.selected ? .white : .black
+        activeGradientBackground(selected: data.selected)
     }
 
     private func setupStyle() {

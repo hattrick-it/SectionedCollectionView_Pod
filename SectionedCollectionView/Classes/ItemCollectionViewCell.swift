@@ -18,6 +18,6 @@ open class ItemCollectionViewCell: UICollectionViewCell {
         return "ItemCollectionViewCell"
     }
     
-    open func configure(withValue value: Any?){}
+    open func configure(withValue value: Any?) { }
     
 }

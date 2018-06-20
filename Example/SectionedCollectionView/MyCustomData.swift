@@ -9,7 +9,7 @@
 import Foundation
 import SectionedCollectionView
 
-public class MyCustomData: Selectable{
+public class MyCustomData: Selectable {
     
     public var name: String
     

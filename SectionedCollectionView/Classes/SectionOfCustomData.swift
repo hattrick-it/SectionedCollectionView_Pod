@@ -21,8 +21,7 @@ open class SectionOfCustomData {
     var header: Header?
     var footer: Footer?
     
-    public init(header: Header? = nil, items: [Item], footer: Footer? = nil)
-    {
+    public init(header: Header? = nil, items: [Item], footer: Footer? = nil) {
         self.items = items
         self.header = header
         self.footer = footer
