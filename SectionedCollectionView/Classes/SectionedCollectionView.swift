@@ -28,6 +28,7 @@ public struct SectionedCollectionViewSettings {
     public struct Style {
         public var sectionInset: UIEdgeInsets = UIEdgeInsets(top: 2, left: 12, bottom: 10, right: 12)
         public var backgroundColor: UIColor = UIColor(red: 239/255, green: 241/255, blue: 247/255, alpha: 1)
+        public var scrollEnabled: Bool = true
     }
     
     public struct Data {
@@ -58,11 +59,12 @@ public struct SectionedCollectionViewSettings {
     
 }
 
-public class SectionedCollectionView: UIView{
+public class SectionedCollectionView: UIView {
  
     public var settings = SectionedCollectionViewSettings()
     
     var collectionView: UICollectionView!
+    var heightConstraint: NSLayoutConstraint?
     public var delegate: SectionedCollectionViewDelegate?
     
     // MARK: - DataSource
@@ -102,6 +104,18 @@ public class SectionedCollectionView: UIView{
         self.setupDataSource()
     }
     
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if(!settings.style.scrollEnabled) {
+            guard let collectionViewFlowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+                return 
+            }
+            heightConstraint?.constant = collectionViewFlowLayout.collectionViewContentSize.height
+            superview?.layoutIfNeeded()
+        }
+    }
+    
     fileprivate func addCollectionView() {
         collectionView = UICollectionView(frame: self.frame, collectionViewLayout: UICollectionViewFlowLayout())
         self.addSubview(collectionView)
@@ -113,6 +127,11 @@ public class SectionedCollectionView: UIView{
         constraints.append(NSLayoutConstraint(item: self.collectionView, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: 0))
         constraints.append(NSLayoutConstraint(item: self.collectionView, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.leading, multiplier: 1, constant: 0))
         constraints.append(NSLayoutConstraint(item: self.collectionView, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.trailing, multiplier: 1, constant: 0))
+        
+        if(!settings.style.scrollEnabled) {
+            heightConstraint = NSLayoutConstraint(item: collectionView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 10)
+            constraints.append(heightConstraint!)
+        }
         self.addConstraints(constraints)
     }
     
@@ -133,6 +152,7 @@ public class SectionedCollectionView: UIView{
         
         // Setup Edges
         collectionViewFlowLayout.sectionInset = settings.style.sectionInset
+        collectionView.isScrollEnabled = settings.style.scrollEnabled
     }
     
     fileprivate func registerHeaderCell() {

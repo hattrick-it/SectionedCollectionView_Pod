@@ -1,6 +1,6 @@
 {
   "name": "SectionedCollectionView",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "summary": "A component to select items in a sectioned Collection View.",
   "description": "A component to select items in a sectioned Collection View. This component help you to get the selected items only with a delegate.",
   "homepage": "https://github.com/hattrick-it/SectionedCollectionView_Pod",
@@ -9,11 +9,11 @@
     "file": "LICENSE"
   },
   "authors": {
-    "estebanarrua": "estarr22@hotmail.com"
+    "estebanarrua": "estebanarrua@hattrick.com"
   },
   "source": {
     "git": "https://github.com/hattrick-it/SectionedCollectionView_Pod.git",
-    "tag": "0.1.0"
+    "tag": "1.0.1"
   },
   "platforms": {
     "ios": "8.0"
