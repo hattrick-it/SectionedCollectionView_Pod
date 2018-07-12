@@ -32,6 +32,7 @@ A component to select items in a sectioned Collection View. This component help 
   s.swift_version = '3.0'
 
   s.source_files = 'SectionedCollectionView/Classes/**/*'
+  s.resources = 'SectionedCollectionView/Classes/**/*.xib'
   
   # s.resource_bundles = {
   #   'SectionedCollectionView' => ['SectionedCollectionView/Assets/*.png']
