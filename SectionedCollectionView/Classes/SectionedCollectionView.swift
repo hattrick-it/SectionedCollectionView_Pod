@@ -185,18 +185,26 @@ public class SectionedCollectionView: UIView {
     }
     
     fileprivate func registerHeaderCell() {
-        let nib = UINib(nibName: self.settings.viewCells.headerViewCellNibName, bundle: nil)
+        let nib = self.getNib(forClassName: self.settings.viewCells.headerViewCellNibName)
         collectionView.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: self.settings.viewCells.headerViewCellReuseIdentifier)
     }
     
     fileprivate func registerFooterCell() {
-        let nib = UINib(nibName: self.settings.viewCells.footerViewCellNibName, bundle: nil)
+        let nib = self.getNib(forClassName: self.settings.viewCells.footerViewCellNibName)
         collectionView.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: self.settings.viewCells.footerViewCellReuseIdentifier)
     }
     
     fileprivate func registerCollectionViewCell() {
-        let nib = UINib(nibName: self.settings.viewCells.itemCollectionViewCellNibName, bundle: nil)
+        let nib = getNib(forClassName: self.settings.viewCells.itemCollectionViewCellNibName)
         collectionView.register(nib, forCellWithReuseIdentifier: self.settings.viewCells.itemCollectionViewCellReuseIdentifier)
+    }
+    
+    fileprivate func getNib(forClassName className: String) -> UINib {
+        var bundle = Bundle.main
+        if bundle.path(forResource: className, ofType: "nib") == nil {
+            bundle = Bundle(for: self.classForCoder)
+        }
+        return UINib(nibName: className, bundle: bundle)
     }
     
     fileprivate func setupDataSource() {

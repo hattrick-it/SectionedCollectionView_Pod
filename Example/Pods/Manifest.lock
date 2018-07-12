@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SectionedCollectionView: bd1f3614149a3ceeecb898a7af201ef2c17811a2
+  SectionedCollectionView: f6c6cf6f1f2578a8464918dcc4f0727168b88d73
 
 PODFILE CHECKSUM: 3716a10da3cfe0a241b05e43580ac29e4cac9913
 

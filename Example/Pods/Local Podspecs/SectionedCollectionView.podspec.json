@@ -19,5 +19,6 @@
     "ios": "8.0"
   },
   "swift_version": "3.0",
-  "source_files": "SectionedCollectionView/Classes/**/*"
+  "source_files": "SectionedCollectionView/Classes/**/*",
+  "resources": "SectionedCollectionView/Classes/**/*.xib"
 }
