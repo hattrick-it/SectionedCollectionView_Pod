@@ -45,6 +45,10 @@ class SectionedCollectionViewController: UIViewController {
         
         sectionedCollectionView.setDataSource(sections: sections)
         sectionedCollectionView.delegate = self
+        
+        // In this way we can select items programtically
+        let indexes = [IndexPath(row: 0, section: 2), IndexPath(row: 0, section: 0), IndexPath(row: 2, section: 0)]
+        self.sectionedCollectionView.selectItems(indexes)
     }
     
 }
