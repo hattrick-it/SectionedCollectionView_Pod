@@ -99,6 +99,35 @@ public class SectionedCollectionView: UIView {
         self.collectionView.reloadData()
     }
     
+    public func selectItem(_ indexPath: IndexPath) {
+        self.didSelectItems([indexPath])
+    }
+    
+    public func selectItems(_ indexPaths: [IndexPath]) {
+        self.didSelectItems(indexPaths)
+    }
+    
+    public func deselectItem(_ indexPath: IndexPath) {
+        self.didDeselectItems([indexPath])
+    }
+    
+    public func deselectItems(_ indexPaths: [IndexPath]) {
+        self.didDeselectItems(indexPaths)
+    }
+    
+    public func deselectAllItems() {
+        let items = self.sections.map({ section -> [Selectable] in
+            return section.selectedItems()
+        }).flatMap({ $0 })
+        
+        for item in items {
+            item.selected = false
+        }
+        
+        self.delegate?.selectedItems?(selected: [])
+        collectionView.reloadData()
+    }
+    
     fileprivate func setupCollectionView(){
         self.addCollectionView()
         self.setupDataSource()
@@ -175,23 +204,53 @@ public class SectionedCollectionView: UIView {
         collectionView.delegate = self
     }
     
+    fileprivate func didSelectItems(_ indexPaths: [IndexPath]) {
+        var selectedItemsCount = self.sections.compactMap({ sections -> [Selectable] in
+            return sections.selectedItems()
+        }).flatMap({ $0 }).count
+        
+        let items = indexPaths.map { sections[$0.section].items[$0.row] }
+        let itemsToSelect = items.filter { !$0.selected }.count
+        
+        selectedItemsCount += itemsToSelect
+        
+        if (self.settings.data.selectedLimit == nil || selectedItemsCount <= self.settings.data.selectedLimit!) {
+            for index in indexPaths {
+                self.sections[index.section].items[index.row].selected = true
+            }
+            
+            self.delegate?.selectedItems?(selected: self.sections.map({ section -> [Selectable] in
+                return section.selectedItems()
+            }).flatMap({ $0 }))
+            
+            collectionView.reloadItems(at: indexPaths)
+        } else {
+            self.delegate?.limitReached?()
+        }
+    }
+    
+    fileprivate func didDeselectItems(_ indexPaths: [IndexPath]) {
+        let items = indexPaths.map { sections[$0.section].items[$0.row] }
+        for item in items {
+            item.selected = false
+        }
+        
+        self.delegate?.selectedItems?(selected: self.sections.map({ section -> [Selectable] in
+            return section.selectedItems()
+        }).flatMap({ $0 }))
+        
+        collectionView.reloadItems(at: indexPaths)
+    }
+    
 }
 
 extension SectionedCollectionView: UICollectionViewDelegate {
 
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedItemsCount = self.sections.compactMap({ sections -> [Selectable] in
-            return sections.selectedItems()
-        }).flatMap({ $0 }).count
-
-        if (self.sections[indexPath.section].items[indexPath.row].selected || self.settings.data.selectedLimit == nil || selectedItemsCount < self.settings.data.selectedLimit!) {
-            self.sections[indexPath.section].items[indexPath.row].selected = !self.sections[indexPath.section].items[indexPath.row].selected
-            self.delegate?.selectedItems?(selected: self.sections.map({ section -> [Selectable] in
-                return section.selectedItems()
-            }).flatMap({ $0 }))
-            collectionView.reloadItems(at: [indexPath])
+        if(sections[indexPath.section].items[indexPath.row].selected) {
+            self.didDeselectItems([indexPath])
         } else {
-            self.delegate?.limitReached?()
+            self.didSelectItems([indexPath])
         }
     }
 
