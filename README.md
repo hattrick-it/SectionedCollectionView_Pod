@@ -149,7 +149,7 @@ sectionedCollectionView.settings.minimumInteritemSpacing = 8
 
 ```
 
-After configuring all the settings it necessary to call the function `sectionedCollectionView.setupView()` 
+##### After configuring all the settings it necessary to call the function `sectionedCollectionView.setupView()` 
 
 ### Data Source 
 
