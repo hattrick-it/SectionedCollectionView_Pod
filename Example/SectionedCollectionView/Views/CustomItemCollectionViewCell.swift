@@ -19,10 +19,8 @@ class CustomItemCollectionViewCell: ItemCollectionViewCell {
         return "CustomItemCollectionViewCell"
     }
 
-    private let gradientStartColor = UIColor(red: 46/255, green: 132/255, blue: 250/255, alpha: 1)
-    private let gradientEndColor = UIColor(red: 83/255, green: 99/255, blue: 236/255, alpha: 1)
-    private var gradientBackgroundLayer: CAGradientLayer?
-
+    private let selectedBackgroundColor: UIColor = UIColor(red: 3/255, green: 155/255, blue: 229/255, alpha: 1)
+    
     @IBOutlet weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
@@ -35,31 +33,12 @@ class CustomItemCollectionViewCell: ItemCollectionViewCell {
         guard let data = value as? MyCustomData else { return }
         nameLabel.text = data.name
         nameLabel.textColor = data.selected ? .white : .black
-        activeGradientBackground(selected: data.selected)
+        backgroundColor = data.selected ? selectedBackgroundColor : .white
     }
 
     private func setupStyle() {
-        backgroundColor = .white
+        nameLabel.font = UIFont.systemFont(ofSize: 20.0)
         layer.cornerRadius = 20
-        setupGradientBackground()
-    }
-
-    private func setupGradientBackground() {
-        gradientBackgroundLayer = CAGradientLayer()
-        gradientBackgroundLayer?.frame = self.bounds
-        gradientBackgroundLayer?.colors = [gradientStartColor.cgColor, gradientEndColor.cgColor]
-        gradientBackgroundLayer?.locations = [0, 1]
-        gradientBackgroundLayer?.startPoint = CGPoint(x: 0, y: 0)
-        gradientBackgroundLayer?.endPoint = CGPoint(x: 1, y: 1)
-        layer.masksToBounds = true
-    }
-
-    private func activeGradientBackground(selected: Bool) {
-        gradientBackgroundLayer?.frame = self.bounds
-        gradientBackgroundLayer?.removeFromSuperlayer()
-        if(selected){
-            layer.insertSublayer(gradientBackgroundLayer!, at: 0)
-        }
     }
     
 }

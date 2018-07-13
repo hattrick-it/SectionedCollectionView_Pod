@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SectionedCollectionView'
-  s.version          = '1.0.1'
+  s.version          = '1.1.0'
   s.summary          = 'A component to select items in a sectioned Collection View.'
 
 # This description is used to generate tags and improve search results.
@@ -32,6 +32,7 @@ A component to select items in a sectioned Collection View. This component help 
   s.swift_version = '3.0'
 
   s.source_files = 'SectionedCollectionView/Classes/**/*'
+  s.resources = 'SectionedCollectionView/Classes/**/*.xib'
   
   # s.resource_bundles = {
   #   'SectionedCollectionView' => ['SectionedCollectionView/Assets/*.png']

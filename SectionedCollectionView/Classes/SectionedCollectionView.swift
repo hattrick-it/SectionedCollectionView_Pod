@@ -28,6 +28,7 @@ public struct SectionedCollectionViewSettings {
     public struct Style {
         public var sectionInset: UIEdgeInsets = UIEdgeInsets(top: 2, left: 12, bottom: 10, right: 12)
         public var backgroundColor: UIColor = UIColor(red: 239/255, green: 241/255, blue: 247/255, alpha: 1)
+        public var scrollEnabled: Bool = true
     }
     
     public struct Data {
@@ -58,11 +59,12 @@ public struct SectionedCollectionViewSettings {
     
 }
 
-public class SectionedCollectionView: UIView{
+public class SectionedCollectionView: UIView {
  
     public var settings = SectionedCollectionViewSettings()
     
     var collectionView: UICollectionView!
+    var heightConstraint: NSLayoutConstraint?
     public var delegate: SectionedCollectionViewDelegate?
     
     // MARK: - DataSource
@@ -97,9 +99,50 @@ public class SectionedCollectionView: UIView{
         self.collectionView.reloadData()
     }
     
+    public func selectItem(_ indexPath: IndexPath) {
+        self.didSelectItems([indexPath])
+    }
+    
+    public func selectItems(_ indexPaths: [IndexPath]) {
+        self.didSelectItems(indexPaths)
+    }
+    
+    public func deselectItem(_ indexPath: IndexPath) {
+        self.didDeselectItems([indexPath])
+    }
+    
+    public func deselectItems(_ indexPaths: [IndexPath]) {
+        self.didDeselectItems(indexPaths)
+    }
+    
+    public func deselectAllItems() {
+        let items = self.sections.map({ section -> [Selectable] in
+            return section.selectedItems()
+        }).flatMap({ $0 })
+        
+        for item in items {
+            item.selected = false
+        }
+        
+        self.delegate?.selectedItems?(selected: [])
+        collectionView.reloadData()
+    }
+    
     fileprivate func setupCollectionView(){
         self.addCollectionView()
         self.setupDataSource()
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if(!settings.style.scrollEnabled) {
+            guard let collectionViewFlowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+                return 
+            }
+            heightConstraint?.constant = collectionViewFlowLayout.collectionViewContentSize.height
+            superview?.layoutIfNeeded()
+        }
     }
     
     fileprivate func addCollectionView() {
@@ -113,6 +156,11 @@ public class SectionedCollectionView: UIView{
         constraints.append(NSLayoutConstraint(item: self.collectionView, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: 0))
         constraints.append(NSLayoutConstraint(item: self.collectionView, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.leading, multiplier: 1, constant: 0))
         constraints.append(NSLayoutConstraint(item: self.collectionView, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.trailing, multiplier: 1, constant: 0))
+        
+        if(!settings.style.scrollEnabled) {
+            heightConstraint = NSLayoutConstraint(item: collectionView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 10)
+            constraints.append(heightConstraint!)
+        }
         self.addConstraints(constraints)
     }
     
@@ -133,21 +181,30 @@ public class SectionedCollectionView: UIView{
         
         // Setup Edges
         collectionViewFlowLayout.sectionInset = settings.style.sectionInset
+        collectionView.isScrollEnabled = settings.style.scrollEnabled
     }
     
     fileprivate func registerHeaderCell() {
-        let nib = UINib(nibName: self.settings.viewCells.headerViewCellNibName, bundle: nil)
+        let nib = self.getNib(forClassName: self.settings.viewCells.headerViewCellNibName)
         collectionView.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: self.settings.viewCells.headerViewCellReuseIdentifier)
     }
     
     fileprivate func registerFooterCell() {
-        let nib = UINib(nibName: self.settings.viewCells.footerViewCellNibName, bundle: nil)
+        let nib = self.getNib(forClassName: self.settings.viewCells.footerViewCellNibName)
         collectionView.register(nib, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: self.settings.viewCells.footerViewCellReuseIdentifier)
     }
     
     fileprivate func registerCollectionViewCell() {
-        let nib = UINib(nibName: self.settings.viewCells.itemCollectionViewCellNibName, bundle: nil)
+        let nib = getNib(forClassName: self.settings.viewCells.itemCollectionViewCellNibName)
         collectionView.register(nib, forCellWithReuseIdentifier: self.settings.viewCells.itemCollectionViewCellReuseIdentifier)
+    }
+    
+    fileprivate func getNib(forClassName className: String) -> UINib {
+        var bundle = Bundle.main
+        if bundle.path(forResource: className, ofType: "nib") == nil {
+            bundle = Bundle(for: self.classForCoder)
+        }
+        return UINib(nibName: className, bundle: bundle)
     }
     
     fileprivate func setupDataSource() {
@@ -155,23 +212,53 @@ public class SectionedCollectionView: UIView{
         collectionView.delegate = self
     }
     
+    fileprivate func didSelectItems(_ indexPaths: [IndexPath]) {
+        var selectedItemsCount = self.sections.compactMap({ sections -> [Selectable] in
+            return sections.selectedItems()
+        }).flatMap({ $0 }).count
+        
+        let items = indexPaths.map { sections[$0.section].items[$0.row] }
+        let itemsToSelect = items.filter { !$0.selected }.count
+        
+        selectedItemsCount += itemsToSelect
+        
+        if (self.settings.data.selectedLimit == nil || selectedItemsCount <= self.settings.data.selectedLimit!) {
+            for index in indexPaths {
+                self.sections[index.section].items[index.row].selected = true
+            }
+            
+            self.delegate?.selectedItems?(selected: self.sections.map({ section -> [Selectable] in
+                return section.selectedItems()
+            }).flatMap({ $0 }))
+            
+            collectionView.reloadItems(at: indexPaths)
+        } else {
+            self.delegate?.limitReached?()
+        }
+    }
+    
+    fileprivate func didDeselectItems(_ indexPaths: [IndexPath]) {
+        let items = indexPaths.map { sections[$0.section].items[$0.row] }
+        for item in items {
+            item.selected = false
+        }
+        
+        self.delegate?.selectedItems?(selected: self.sections.map({ section -> [Selectable] in
+            return section.selectedItems()
+        }).flatMap({ $0 }))
+        
+        collectionView.reloadItems(at: indexPaths)
+    }
+    
 }
 
 extension SectionedCollectionView: UICollectionViewDelegate {
 
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedItemsCount = self.sections.compactMap({ sections -> [Selectable] in
-            return sections.selectedItems()
-        }).flatMap({ $0 }).count
-
-        if (self.sections[indexPath.section].items[indexPath.row].selected || self.settings.data.selectedLimit == nil || selectedItemsCount < self.settings.data.selectedLimit!) {
-            self.sections[indexPath.section].items[indexPath.row].selected = !self.sections[indexPath.section].items[indexPath.row].selected
-            self.delegate?.selectedItems?(selected: self.sections.map({ section -> [Selectable] in
-                return section.selectedItems()
-            }).flatMap({ $0 }))
-            collectionView.reloadItems(at: [indexPath])
+        if(sections[indexPath.section].items[indexPath.row].selected) {
+            self.didDeselectItems([indexPath])
         } else {
-            self.delegate?.limitReached?()
+            self.didSelectItems([indexPath])
         }
     }
 
