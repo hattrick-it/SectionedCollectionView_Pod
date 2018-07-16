@@ -222,7 +222,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				BA53960E40792777E0B39496 /* [CP] Embed Pods Frameworks */,
-				7836D08635F25113A174AC42 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,8 +240,6 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				0EE861A584A8D7ABAD71E496 /* [CP] Embed Pods Frameworks */,
-				2B5607596151DBE7CC5BE82E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -319,51 +316,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0EE861A584A8D7ABAD71E496 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SectionedCollectionView_Tests/Pods-SectionedCollectionView_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2B5607596151DBE7CC5BE82E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SectionedCollectionView_Tests/Pods-SectionedCollectionView_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7836D08635F25113A174AC42 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SectionedCollectionView_Example/Pods-SectionedCollectionView_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8CAB59157BF62C6EF130B473 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
