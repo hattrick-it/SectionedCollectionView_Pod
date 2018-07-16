@@ -44,9 +44,9 @@ class SectionedCollectionViewController: UIViewController {
             MySectionOfCustomData(header: "Drinks", items: [MyCustomData(name: "Coke", selected: false), MyCustomData(name: "Wine", selected: false), MyCustomData(name: "Water", selected: false), MyCustomData(name: "Orange Juice", selected: false), MyCustomData(name: "Tea", selected: false), MyCustomData(name: "Beer", selected: false)])
         ]
         
-        sectionedCollectionView.setDataSource(sections: sections)
         sectionedCollectionView.delegate = self
         
+        self.sectionedCollectionView.setDataSource(sections: sections)
         // In this way we can select items programtically
         let indexes = [IndexPath(row: 0, section: 2), IndexPath(row: 0, section: 0), IndexPath(row: 2, section: 0)]
         self.sectionedCollectionView.selectItems(indexes)
