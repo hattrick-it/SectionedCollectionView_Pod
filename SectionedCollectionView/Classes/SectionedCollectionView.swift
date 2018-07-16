@@ -84,10 +84,28 @@ public class SectionedCollectionView: UIView {
         
         self.setupCollectionView()
         self.setupView()
+        self.collectionView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+    }
+    
+    deinit {
+        self.collectionView.removeObserver(self, forKeyPath: "contentSize")
+    }
+    
+    override public func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if (keyPath == "contentSize") {
+            if(!settings.style.scrollEnabled) {
+                guard let collectionViewFlowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+                    return
+                }
+                heightConstraint?.constant = collectionViewFlowLayout.collectionViewContentSize.height
+                superview?.layoutIfNeeded()
+            }
+        }
     }
     
     public func setupView() {
         backgroundColor = settings.style.backgroundColor
+        self.createHeightConstraint()
         self.setupCollectionViewLayout()
         self.registerHeaderCell()
         self.registerFooterCell()
@@ -135,14 +153,6 @@ public class SectionedCollectionView: UIView {
     
     public override func layoutSubviews() {
         super.layoutSubviews()
-        
-        if(!settings.style.scrollEnabled) {
-            guard let collectionViewFlowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
-                return 
-            }
-            heightConstraint?.constant = collectionViewFlowLayout.collectionViewContentSize.height
-            superview?.layoutIfNeeded()
-        }
     }
     
     fileprivate func addCollectionView() {
@@ -157,11 +167,14 @@ public class SectionedCollectionView: UIView {
         constraints.append(NSLayoutConstraint(item: self.collectionView, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.leading, multiplier: 1, constant: 0))
         constraints.append(NSLayoutConstraint(item: self.collectionView, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.trailing, multiplier: 1, constant: 0))
         
+        self.addConstraints(constraints)
+    }
+    
+    fileprivate func createHeightConstraint() {
         if(!settings.style.scrollEnabled) {
             heightConstraint = NSLayoutConstraint(item: collectionView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 10)
-            constraints.append(heightConstraint!)
+            self.addConstraint(heightConstraint!)
         }
-        self.addConstraints(constraints)
     }
     
     fileprivate func setupCollectionViewLayout() {
