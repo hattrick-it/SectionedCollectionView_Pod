@@ -106,7 +106,6 @@ public class SectionedCollectionView: UIView {
     public func setupView() {
         backgroundColor = settings.style.backgroundColor
         self.createHeightConstraint()
-        self.setupCollectionViewLayout()
         self.registerHeaderCell()
         self.registerFooterCell()
         self.registerCollectionViewCell()
@@ -153,6 +152,9 @@ public class SectionedCollectionView: UIView {
     
     public override func layoutSubviews() {
         super.layoutSubviews()
+        setupCollectionViewLayout()
+        collectionView.layoutIfNeeded()
+        collectionView.reloadData()
     }
     
     fileprivate func addCollectionView() {
@@ -185,7 +187,7 @@ public class SectionedCollectionView: UIView {
         collectionViewFlowLayout.footerReferenceSize = CGSize(width: collectionView.frame.width, height: settings.footerStyle.footerReferenceHeight)
         
         // Setup Cell Size
-        let width = (collectionView.frame.width - (settings.style.sectionInset.left + settings.style.sectionInset.right + (CGFloat(settings.itemsSetup.itemsForRows - 1) * settings.itemsSetup.minimumInteritemSpacing))) / CGFloat(settings.itemsSetup.itemsForRows)
+        let width = (collectionView.frame.width - CGFloat(settings.style.sectionInset.left + settings.style.sectionInset.right + (CGFloat(settings.itemsSetup.itemsForRows - 1) * CGFloat(settings.itemsSetup.minimumInteritemSpacing) + 1))) / CGFloat(settings.itemsSetup.itemsForRows)
         collectionViewFlowLayout.itemSize = CGSize(width: width, height: width * settings.itemsSetup.heightRatio)
         
         // Setup Minimun Spaces
