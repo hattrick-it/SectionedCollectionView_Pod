@@ -34,6 +34,7 @@ class SectionedCollectionViewController: UIViewController {
         sectionedCollectionView.settings.viewCells.footerViewCellNibName = FooterViewCell.nibName
         sectionedCollectionView.settings.viewCells.footerViewCellReuseIdentifier = FooterViewCell.cellReuseIdentifier
         sectionedCollectionView.settings.data.selectedLimit = 5
+        sectionedCollectionView.settings.style.scrollEnabled = false
         
         sectionedCollectionView.setupView()
         
@@ -46,10 +47,12 @@ class SectionedCollectionViewController: UIViewController {
         
         sectionedCollectionView.delegate = self
         
-        self.sectionedCollectionView.setDataSource(sections: sections)
-        // In this way we can select items programtically
-        let indexes = [IndexPath(row: 0, section: 2), IndexPath(row: 0, section: 0), IndexPath(row: 2, section: 0)]
-        self.sectionedCollectionView.selectItems(indexes)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.sectionedCollectionView.setDataSource(sections: sections)
+            // In this way we can select items programtically
+            let indexes = [IndexPath(row: 0, section: 2), IndexPath(row: 0, section: 0), IndexPath(row: 2, section: 0)]
+            self.sectionedCollectionView.selectItems(indexes)
+        }
     }
     
 }
