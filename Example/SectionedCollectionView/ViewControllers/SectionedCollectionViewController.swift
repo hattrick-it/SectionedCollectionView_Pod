@@ -34,7 +34,6 @@ class SectionedCollectionViewController: UIViewController {
         sectionedCollectionView.settings.viewCells.footerViewCellNibName = FooterViewCell.nibName
         sectionedCollectionView.settings.viewCells.footerViewCellReuseIdentifier = FooterViewCell.cellReuseIdentifier
         sectionedCollectionView.settings.data.selectedLimit = 5
-        sectionedCollectionView.settings.style.scrollEnabled = false
         
         sectionedCollectionView.setupView()
         
